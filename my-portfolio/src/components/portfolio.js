@@ -13,9 +13,9 @@ const projects = [
     link: 'https://github.com/uni-mart',
   },
   {
-    title: 'Weather Application',
-    description: 'Build a weather application that fetches current weather predictions from an API, you can use HTML, CSS, and JavaScript. The application will interact with a weather API like OpenWeatherMap to get real-time weather data.',
-    link: 'https://github.com/Nalin9659/Weatherr-Appliation', 
+    title: 'Note-Taking application with API',
+    description: 'A lightweight, efficient and scalable API for managing and storing notes. This porject provides a robust backend solutions for note-taking application, ensuring data presistance, CRUD operations and seamless integrations with modern frontend framework. This application is built with a focus on performance and user-cenrtric design, prviding developerswith a foundations for integrations note-taking functionaity into their projects.  ',
+    link: 'https://github.com/Nalin9659/APIs-for-Note-taking-applications.git',
   }
 ];
 
