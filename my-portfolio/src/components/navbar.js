@@ -1,20 +1,24 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Container, Button } from 'react-bootstrap';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-const NavigationBar = () => (
-  <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-    <Navbar.Brand href="#home">Nalin's Portfolio</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ml-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#about">About</Nav.Link>
-        <Nav.Link href="#skills">Skills</Nav.Link>
-        <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-        <Nav.Link href="#contact">Contact</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-);
+const MyNavbar = ({ darkMode, setDarkMode }) => {
+  return (
+    <Navbar className={`py-3 ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}>
+      <Container className="d-flex justify-content-between">
+        <Navbar.Brand className={darkMode ? "text-light" : "text-dark"}></Navbar.Brand>
+        
+        {/* Dark Mode Toggle Button */}
+        <Button 
+          variant={darkMode ? "light" : "dark"} 
+          onClick={() => setDarkMode(!darkMode)}
+          className="d-flex align-items-center"
+        >
+          {darkMode ? <FaSun color="orange" size={20} /> : <FaMoon color="white" size={20} />}
+        </Button>
+      </Container>
+    </Navbar>
+  );
+};
 
-export default NavigationBar;
+export default MyNavbar;

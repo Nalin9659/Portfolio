@@ -1,33 +1,58 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Nav } from 'react-bootstrap';
+import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope, } from 'react-icons/fa';
 
-const Header = () => {
+const Sidebar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-      <Container>
-        <Navbar.Brand href="#home">Nalin's Portfolio</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-          <Nav className="ml-auto">
-            <Nav.Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={28} />
-            </Nav.Link>
-            <Nav.Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={28} />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div style={sidebarStyle}>
+      <div className="text-center mt-4">
+      </div>
+
+      {/* Navigation Icons */}
+      <Nav className="flex-column text-center mt-5">
+        <Nav.Link href="#intro" style={iconLinkStyle}><FaHome size={28} /></Nav.Link>
+        <Nav.Link href="#about" style={iconLinkStyle}><FaUser size={28} /></Nav.Link>
+        <Nav.Link href="#skills" style={iconLinkStyle}><FaCode size={28} /></Nav.Link>
+        <Nav.Link href="#portfolio" style={iconLinkStyle}><FaBriefcase size={28} /></Nav.Link>
+        <Nav.Link href="#contact" style={iconLinkStyle}><FaEnvelope size={28} /></Nav.Link>
+      </Nav>
+
+    </div>
   );
 };
 
-export default Header;
+// Sidebar Styles
+const sidebarStyle = {
+  position: 'fixed',
+  left: '0',
+  top: '20%',
+  width: '4vw', 
+  height: '60vh',
+  backgroundColor: '#343a40',
+  padding: '20px 0',
+  color: 'white',
+  borderRadius: '0 40px 40px 0', 
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+};
+
+// Media Queries
+if (window.innerWidth <= 768) {
+  sidebarStyle.width = '100%';
+  sidebarStyle.height = 'auto';
+  sidebarStyle.top = '0';
+  sidebarStyle.borderRadius = '0';
+}
+
+// Icon Link Styles
+const iconLinkStyle = {
+  color: 'white',
+  textDecoration: 'none',
+  padding: '15px 0',
+  display: 'block',
+  fontSize: '28px',
+};
+
+export default Sidebar;

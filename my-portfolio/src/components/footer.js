@@ -16,7 +16,7 @@ const Footer = () => (
               <FaLinkedin size={28} />
             </a>
           </div>
-        </Col>
+        </Col>  
       </Row>
     </Container>
   </footer>

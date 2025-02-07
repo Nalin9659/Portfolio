@@ -39,3 +39,43 @@ a.text-white:hover{
     transform: rotate(360deg);
   }
 }
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200%; 
+}
+.btn-primary{
+  background-color: rgb(57, 55, 206);
+  color: rgb(2, 14, 11);
+  border:#282c34;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 3px;
+  cursor:progress;
+  border-radius: 10px;
+}
+.btn-primary:hover{
+  background-color: #0ef;
+  color: #282c34;
+}
+.btn-secondary{
+  background-color: rgb(79, 76, 223);
+  color: #282c34;
+  border: #282c34;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 16px;
+  margin: 6px 3px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.btn-secondary:hover{
+  background-color: #0ef;
+  color: #282c34;
+}
+

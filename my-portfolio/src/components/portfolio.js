@@ -13,7 +13,7 @@ const projects = [
     link: 'https://github.com/uni-mart',
   },
   {
-    title: 'Note-Taking application with API',
+    title: 'To-Do-List Appication',
     description: 'A lightweight, efficient and scalable API for managing and storing notes. This porject provides a robust backend solutions for note-taking application, ensuring data presistance, CRUD operations and seamless integrations with modern frontend framework. This application is built with a focus on performance and user-cenrtric design, prviding developerswith a foundations for integrations note-taking functionaity into their projects.  ',
     link: 'https://github.com/Nalin9659/APIs-for-Note-taking-applications.git',
   }
@@ -22,7 +22,7 @@ const projects = [
 const Portfolio = () => (
   <section id="portfolio" className="py-5">
     <Container>
-      <h2 className="text-center mb-5">Projects</h2>
+      <h2 className="text-center mb-5"><b>My Work</b></h2>
       <Row>
         {projects.map((project) => (
           <Col md={4} key={project.title} className="mb-4">
